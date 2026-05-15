@@ -1,9 +1,9 @@
 {
-	"id": "plugin-template",
-	"name": "Plugin Template",
+	"id": "simple-git",
+	"name": "Simple Git",
 	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "Plugin template.",
+	"description": "Simple Git.",
 	"author": "imaikosuke",
 	"authorUrl": "https://github.com/imaikosuke",
 	"isDesktopOnly": true

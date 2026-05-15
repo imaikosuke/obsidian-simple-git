@@ -1,11 +1,11 @@
 import { App, Notice, PluginSettingTab, Setting } from "obsidian";
-import type PluginTemplate from "../../main";
+import type SimpleGitPlugin from "../../main";
 
 /** Settings screen. Add UI fields that map to `PluginSettings` in `src/settings.ts`. */
-export class TemplateSettingTab extends PluginSettingTab {
-	plugin: PluginTemplate;
+export class SimpleGitSettingTab extends PluginSettingTab {
+	plugin: SimpleGitPlugin;
 
-	constructor(app: App, plugin: PluginTemplate) {
+	constructor(app: App, plugin: SimpleGitPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

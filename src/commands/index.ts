@@ -1,7 +1,7 @@
 import { Notice, Plugin } from "obsidian";
-import type PluginTemplate from "../../main";
+import type SimpleGitPlugin from "../../main";
 
-function runSampleAction(plugin: PluginTemplate): void {
+function runSampleAction(plugin: SimpleGitPlugin): void {
 	if (plugin.settings.sampleEnabled) {
 		new Notice("Plugin template: sample action.");
 	} else {
@@ -13,7 +13,7 @@ function runSampleAction(plugin: PluginTemplate): void {
  * Register ribbon icon and commands. Add your command IDs in manifest.json as needed.
  */
 export function registerCommands(plugin: Plugin): void {
-	const p = plugin as PluginTemplate;
+	const p = plugin as SimpleGitPlugin;
 
 	plugin.addRibbonIcon("dice", "Run sample action", () => {
 		runSampleAction(p);
