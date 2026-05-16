@@ -3,7 +3,7 @@
 	"name": "Simple Git",
 	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "Simple Git.",
+	"description": "Stages changes, commits when needed, and pushes main to origin.",
 	"author": "imaikosuke",
 	"authorUrl": "https://github.com/imaikosuke",
 	"isDesktopOnly": true

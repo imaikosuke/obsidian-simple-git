@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-simple-git",
 	"version": "0.0.1",
-	"description": "Simple Git.",
+	"description": "Stages changes, commits when needed, and pushes main to origin.",
 	"main": "main.js",
 	"scripts": {
 		"setup": "node onboard.mjs",
