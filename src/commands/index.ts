@@ -1,29 +1,16 @@
-import { Notice, Plugin } from "obsidian";
-import type SimpleGitPlugin from "../../main";
+import { Plugin } from "obsidian";
+import { pushVaultToRemote } from "../git/push";
 
-function runSampleAction(plugin: SimpleGitPlugin): void {
-	if (plugin.settings.sampleEnabled) {
-		new Notice("Plugin template: sample action.");
-	} else {
-		new Notice("Sample action is off (enable it in settings).");
-	}
-}
-
-/**
- * Register ribbon icon and commands. Add your command IDs in manifest.json as needed.
- */
 export function registerCommands(plugin: Plugin): void {
-	const p = plugin as SimpleGitPlugin;
-
-	plugin.addRibbonIcon("dice", "Run sample action", () => {
-		runSampleAction(p);
+	plugin.addRibbonIcon("github", "Sync GitHub", () => {
+		void pushVaultToRemote(plugin);
 	});
 
 	plugin.addCommand({
-		id: "sample",
-		name: "Run sample action",
+		id: "push-changes",
+		name: "Sync GitHub",
 		callback: () => {
-			runSampleAction(p);
+			void pushVaultToRemote(plugin);
 		},
 	});
 }
