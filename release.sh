@@ -2,7 +2,7 @@
 # Release: pnpm run check, pnpm version (syncs manifest + tag), push branch + tag.
 # GitHub Actions release workflow runs on the pushed tag.
 #
-# Release ZIP filename is <manifest id>.zip in .github/workflows/release.yml (set by onboarding: pnpm run setup).
+# Release assets: main.js and manifest.json (see .github/workflows/release.yml).
 #
 # Usage: ./release.sh <patch|minor|major|...|X.Y.Z>
 # Requires: pnpm, git, clean working tree, remote "origin" with push access.
