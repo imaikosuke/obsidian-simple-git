@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-simple-git",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Stages changes, commits when needed, and pushes main to origin.",
 	"main": "main.js",
 	"scripts": {

@@ -3,7 +3,7 @@
 Push-only: stage the vault, commit when there are changes, then `git push origin main`. No pull or fetch.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/imaikosuke/obsidian-simple-git/releases)
+[![Version](https://img.shields.io/badge/version-0.0.2-blue.svg)](https://github.com/imaikosuke/obsidian-simple-git/releases)
 [![Obsidian Plugin](https://img.shields.io/badge/Obsidian-Plugin-7c3aed.svg)](https://obsidian.md)
 
 ## Prerequisites
