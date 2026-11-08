@@ -52,7 +52,8 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 pnpm run check
-pnpm version "$VERSION_ARG"
+# pnpm 12 does not read tag-version-prefix or message from .npmrc.
+pnpm version "$VERSION_ARG" --tag-version-prefix="" --message="release: %s"
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 NEW_TAG=$(git tag --points-at HEAD | head -1)

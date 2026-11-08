@@ -12,11 +12,13 @@ let pushInProgress = false;
 const PUSH_REMOTE = "origin";
 const PUSH_BRANCH = "main";
 
-const DEFAULT_GITIGNORE = `# Default .gitignore created by Simple Git on first sync. Customize as needed.
-.obsidian/workspace
-.obsidian/workspace.json
-.obsidian/workspaces.json
-.obsidian/workspace-mobile.json
+function defaultGitignore(configDir: string): string {
+	const dir = normalizePath(configDir).replace(/\/+$/, "");
+	return `# Default .gitignore created by Simple Git on first sync. Customize as needed.
+${dir}/workspace
+${dir}/workspace.json
+${dir}/workspaces.json
+${dir}/workspace-mobile.json
 .Trash/
 
 # OS · macOS
@@ -37,6 +39,7 @@ desktop.ini
 *.swp
 *.swo
 `;
+}
 
 async function ensureDefaultGitignore(vault: Vault): Promise<boolean> {
 	const rel = normalizePath(".gitignore");
@@ -46,7 +49,7 @@ async function ensureDefaultGitignore(vault: Vault): Promise<boolean> {
 	) {
 		return false;
 	}
-	await vault.create(rel, DEFAULT_GITIGNORE);
+	await vault.create(rel, defaultGitignore(vault.configDir));
 	return true;
 }
 
